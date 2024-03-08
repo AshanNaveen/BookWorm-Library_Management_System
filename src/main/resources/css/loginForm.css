@@ -1,0 +1,26 @@
+.login-page-quato{
+    -fx-font-family: "Raleway ExtraLight";
+    -fx-font-weight: 400;
+    -fx-font-size: 26;
+    -fx-font-style: Italic;
+    -fx-text-fill: white;
+}
+
+.signIn-text{
+    -fx-font-family: "Raleway Black";
+    -fx-font-size: 45;
+    -fx-font-weight: 800;
+}
+
+.login-btn{
+    -fx-border-radius: 5;
+    -fx-font-family: "Raleway Black";
+    -fx-font-size: 17;
+    -fx-font-weight: 800;
+}
+
+.signUp-btn{
+    -fx-font-family: "Raleway Black";
+    -fx-font-weight: 800;
+    -fx-text-fill: #7565D7;
+}
