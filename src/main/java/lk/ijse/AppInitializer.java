@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lk.ijse.util.SessionFactoryConfig;
 
 public class AppInitializer extends Application {
     public static void main(String[] args) {
