@@ -53,12 +53,12 @@
             <Font name="High Tower Text" size="21.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="990.0" layoutY="745.0" onMouseClicked="#branchesOnClicked" onMouseEntered="#branchesOnEntered" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Raleway'; -fx-font-size: 18; -fx-font-weight: 600;" text="Our Branches">
+      <Text fill="WHITE" layoutX="990.0" layoutY="745.0" onMouseClicked="#branchesOnClicked" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Raleway'; -fx-font-size: 18; -fx-font-weight: 600;" text="Our Branches">
          <font>
             <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
          </font>
       </Text>
-      <ImageView fitHeight="21.0" fitWidth="34.0" layoutX="1113.0" layoutY="728.0" onMouseClicked="#branchesOnClicked" onMouseEntered="#branchesOnEntered" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="21.0" fitWidth="34.0" layoutX="1113.0" layoutY="728.0" onMouseClicked="#branchesOnClicked" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/arrow.png" />
          </image>
@@ -72,13 +72,13 @@
                   <Image url="@../assets/searchIcon.png" />
                </image>
             </ImageView>
-            <JFXTextField fx:id="searchTxt" alignment="CENTER" focusColor="#405aa800" layoutX="93.0" layoutY="34.0" prefHeight="31.0" prefWidth="585.0" promptText="Choose What You Want........." style="-fx-font-family: 'Raleway'; -fx-font-weight: 800;" styleClass="searchBar" unFocusColor="#4d4d4d00" />
+            <JFXTextField fx:id="searchTxt" alignment="CENTER" focusColor="#405aa800" layoutX="93.0" layoutY="34.0" onAction="#txtSearchOnAction" prefHeight="31.0" prefWidth="585.0" promptText="Choose What You Want........." style="-fx-font-family: 'Raleway'; -fx-font-weight: 800;" styleClass="searchBar" unFocusColor="#4d4d4d00" />
             <Pane layoutX="829.0" layoutY="42.0" prefHeight="125.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #513be0;">
                <children>
                   <Pane fx:id="avaterPane" layoutX="262.0" layoutY="11.0" prefHeight="69.0" prefWidth="69.0" style="-fx-background-radius: 50; -fx-background-color: black; -fx-border-radius: 50;" />
                   <Label fx:id="txtName" layoutX="13.0" layoutY="63.0" prefHeight="25.0" prefWidth="241.0" style="-fx-font-family: 'Raleway'; -fx-font-weight: 900; -fx-font-size: 16;" text="K.G.Ashan Naveen Theekshana" />
                   <Label fx:id="txtMail" layoutX="14.0" layoutY="83.0" prefHeight="25.0" prefWidth="241.0" style="-fx-font-family: 'Raleway'; -fx-font-weight: 400; -fx-font-size: 16;" text="ashannvn@gmail.com" />
-                  <Label fx:id="btnEdit" alignment="CENTER" layoutX="261.0" layoutY="92.0" prefHeight="25.0" prefWidth="69.0" style="-fx-font-family: 'Raleway'; -fx-font-weight: 700; -fx-font-size: 16;" text="Edit" textAlignment="CENTER" textFill="#513be0" underline="true" />
+                  <Label fx:id="btnEditProfile" alignment="CENTER" layoutX="261.0" layoutY="92.0" onDragDetected="#btnEditProfileOnAction" prefHeight="25.0" prefWidth="69.0" style="-fx-font-family: 'Raleway'; -fx-font-weight: 700; -fx-font-size: 16;" text="Edit" textAlignment="CENTER" textFill="#513be0" underline="true" />
                   <Text layoutX="2.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Raleway'; -fx-font-size: 12; -fx-font-weight: 600;" text="No of Books Your Borrowed" textAlignment="CENTER" wrappingWidth="120.80078125">
                      <font>
                         <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
@@ -91,12 +91,12 @@
                   </Text>
                </children>
             </Pane>
-            <JFXButton fx:id="allBooksBtn" layoutX="88.0" layoutY="92.0" style="-fx-background-color: white; -fx-text-fill: #513be0;" styleClass="genreBtn" text="All" />
-            <JFXButton fx:id="novelBtn" layoutX="152.0" layoutY="92.0" styleClass="genreBtn" text="Novel" />
-            <JFXButton fx:id="shortStoriesBtn" layoutX="238.0" layoutY="92.0" styleClass="genreBtn" text="Short Stories" />
-            <JFXButton fx:id="historyBtn" layoutX="372.0" layoutY="92.0" styleClass="genreBtn" text="History" />
-            <JFXButton fx:id="biographyBtn" layoutX="470.0" layoutY="92.0" styleClass="genreBtn" text="Biography" />
-            <JFXButton fx:id="educationalBtn" layoutX="590.0" layoutY="92.0" styleClass="genreBtn" text="Educational" />
+            <JFXButton fx:id="allBooksBtn" layoutX="88.0" layoutY="92.0" onAction="#btnAllBooksOnAction" style="-fx-background-color: white; -fx-text-fill: #513be0;" styleClass="genreBtn" text="All" />
+            <JFXButton fx:id="novelBtn" layoutX="152.0" layoutY="92.0" onAction="#btnNovelOnAction" styleClass="genreBtn" text="Novel" />
+            <JFXButton fx:id="shortStoriesBtn" layoutX="238.0" layoutY="92.0" onAction="#btnShortStoriesOnAction" styleClass="genreBtn" text="Short Stories" />
+            <JFXButton fx:id="historyBtn" layoutX="372.0" layoutY="92.0" onAction="#btnHistoryOnAction" styleClass="genreBtn" text="History" />
+            <JFXButton fx:id="biographyBtn" layoutX="470.0" layoutY="92.0" onAction="#btnBiographyOnAction" styleClass="genreBtn" text="Biography" />
+            <JFXButton fx:id="educationalBtn" layoutX="590.0" layoutY="92.0" onAction="#btnEducationalOnAction" styleClass="genreBtn" text="Educational" />
             <ScrollPane layoutX="21.0" layoutY="151.0" prefHeight="450.0" prefWidth="758.0">
                <content>
                   <VBox fx:id="books" prefHeight="446.0" prefWidth="756.0" />
@@ -107,8 +107,8 @@
                   <VBox fx:id="returnVbox" prefHeight="368.0" prefWidth="334.0" />
                </content>
             </ScrollPane>
-            <JFXButton fx:id="btnReadingHistory" layoutX="837.0" layoutY="573.0" prefHeight="35.0" prefWidth="155.0" styleClass="genreBtn" text="Reading Histotry" />
-            <JFXButton fx:id="btnLogOut" layoutX="1008.0" layoutY="574.0" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #FF4949; -fx-border-color: #FF4949;" styleClass="genreBtn" text="Log Out" />
+            <JFXButton fx:id="btnReadingHistory" layoutX="837.0" layoutY="573.0" onAction="#btnReadingHistoryOnAction" prefHeight="35.0" prefWidth="155.0" styleClass="genreBtn" text="Reading Histotry" />
+            <JFXButton fx:id="btnLogOut" layoutX="1008.0" layoutY="574.0" onAction="#btnLogOutOnAction" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #FF4949; -fx-border-color: #FF4949;" styleClass="genreBtn" text="Log Out" />
          </children>
       </Pane>
    </children>
