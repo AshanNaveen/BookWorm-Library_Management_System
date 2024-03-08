@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
 <AnchorPane prefHeight="625.0" prefWidth="1212.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UpdateProfileFormController">
-
+   <children>
+      <Text layoutX="398.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Raleway&quot;; -fx-font-weight: 600; -fx-font-size: 50;" text="Update Profile Info">
+         <font>
+            <Font size="41.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000077" height="13.0" offsetY="4.0" radius="6.0" width="13.0" />
+         </effect>
+      </Text>
+      <Text fx:id="btnBackWord" fill="#513be0" layoutX="103.0" layoutY="57.0" onMouseClicked="#btnBackOnAction" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Raleway'; -fx-font-size: 24; -fx-font-weight: 800;" text="Back">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="btnBackArrow" fitHeight="21.0" fitWidth="34.0" layoutX="70.0" layoutY="38.0" onMouseClicked="#btnBackOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/arrowPurple.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtEmail" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="232.0" prefHeight="31.0" prefWidth="369.0" promptText=" Email" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
+      <JFXTextField fx:id="txtName" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="159.0" prefHeight="31.0" prefWidth="369.0" promptText=" Name" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
+      <JFXTextField fx:id="txtPhone" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="305.0" prefHeight="31.0" prefWidth="369.0" promptText=" Phone Number" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
+      <JFXTextField fx:id="txtPassword" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="378.0" prefHeight="31.0" prefWidth="369.0" promptText=" Password" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
+      <JFXTextField fx:id="txtConfirmPassword" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="451.0" prefHeight="31.0" prefWidth="369.0" promptText=" Confirm Password" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
+      <Pane fx:id="photoPane" layoutX="736.0" layoutY="159.0" prefHeight="257.0" prefWidth="257.0" style="-fx-background-color: black; -fx-border-radius: 100; -fx-background-radius: 40;" />
+      <JFXButton fx:id="btnUpdate" layoutX="627.0" layoutY="528.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="219.0" style="-fx-background-color: #1C9628; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Update Details" />
+      <JFXButton fx:id="btnDelete" layoutX="884.0" layoutY="528.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="219.0" style="-fx-background-color: #FF4949; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Delete My Account" />
+      <JFXButton fx:id="btnUploadPhoto" layoutX="737.0" layoutY="451.0" onAction="#btnUploadPhotoOnAction" prefHeight="39.0" prefWidth="257.0" style="-fx-background-color: #513be0; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Upload Photo" />
+   </children>
 </AnchorPane>

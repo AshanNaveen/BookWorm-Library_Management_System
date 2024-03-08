@@ -1,2 +1,4 @@
-package lk.ijse.controller;public class UpdateProfileFormController {
+package lk.ijse.controller;
+
+public class UpdateProfileFormController {
 }
