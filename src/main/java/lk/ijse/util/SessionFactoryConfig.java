@@ -1,18 +1,34 @@
 package lk.ijse.util;
 
+import lk.ijse.entity.Book;
+import lk.ijse.entity.Branch;
+import lk.ijse.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.io.IOException;
+import java.util.Properties;
+
 public class SessionFactoryConfig {
     private static SessionFactoryConfig factoryConfig;
 
-    private final SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     private SessionFactoryConfig(){
-        sessionFactory=new Configuration()
-                .configure()
-                .buildSessionFactory();
+        Properties properties = new Properties();
+        try {
+            properties.load(ClassLoader.getSystemClassLoader().getResourceAsStream("hibernate.properties"));
+            Configuration configuration = new Configuration().setProperties(properties);
+            sessionFactory=configuration
+                    .addAnnotatedClass(Book.class)
+                    .addAnnotatedClass(Branch.class)
+                    .addAnnotatedClass(User.class)
+                    .buildSessionFactory();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static SessionFactoryConfig getInstance(){
