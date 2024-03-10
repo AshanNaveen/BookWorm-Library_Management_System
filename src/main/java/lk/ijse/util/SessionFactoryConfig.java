@@ -1,6 +1,7 @@
 package lk.ijse.util;
 
 import lk.ijse.entity.Book;
+import lk.ijse.entity.BorrowDetails;
 import lk.ijse.entity.Branch;
 import lk.ijse.entity.User;
 import org.hibernate.Session;
@@ -24,6 +25,7 @@ public class SessionFactoryConfig {
                     .addAnnotatedClass(Book.class)
                     .addAnnotatedClass(Branch.class)
                     .addAnnotatedClass(User.class)
+                    .addAnnotatedClass(BorrowDetails.class)
                     .buildSessionFactory();
         } catch (IOException e) {
             e.printStackTrace();
