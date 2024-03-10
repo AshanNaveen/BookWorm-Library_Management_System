@@ -3,6 +3,8 @@ package lk.ijse.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity(name = "book")
 @Data
 public class Book {
@@ -19,6 +21,9 @@ public class Book {
     private String photoPath;
     @Column(name = "isbn" ,nullable = false,unique = true)
     private String isbn;
+
+    @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "book")
+    private List<BorrowDetails> borrowDetails;
 
     @Override
     public String toString() {
