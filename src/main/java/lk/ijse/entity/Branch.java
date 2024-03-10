@@ -2,12 +2,17 @@ package lk.ijse.entity;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.annotations.Cache;
 
-@Entity(name = "branch")
+@Entity
+@Table(name = "branch")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Branch {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,14 +27,4 @@ public class Branch {
     @ManyToOne
     @JoinColumn(name = "user")
     private User user;
-
-    @Override
-    public String toString() {
-        return "Branch{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
-                '}';
-    }
 }

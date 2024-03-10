@@ -1,12 +1,18 @@
 package lk.ijse.entity;
 
 import jakarta.persistence.*;
+import lk.ijse.dto.BookDTO;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Entity(name = "book")
+@Entity
+@Table(name = "book")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,15 +31,7 @@ public class Book {
     @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "book")
     private List<BorrowDetails> borrowDetails;
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", genre='" + genre + '\'' +
-                ", author='" + author + '\'' +
-                ", photoPath='" + photoPath + '\'' +
-                ", ISBN='" + isbn + '\'' +
-                '}';
+    public BookDTO toDTO(){
+        return new BookDTO(id,name,genre,author,photoPath,isbn);
     }
 }

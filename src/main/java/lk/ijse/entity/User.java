@@ -1,12 +1,19 @@
 package lk.ijse.entity;
 
 import jakarta.persistence.*;
+
+import lk.ijse.dto.UserDTO;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Entity(name = "user")
+@Entity
+@Table(name = "user")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,16 +37,7 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "user")
     private List<BorrowDetails> borrowDetails;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", password='" + password + '\'' +
-                ", photoPath='" + photoPath + '\'' +
-                ", isAdmin=" + isAdmin +
-                '}';
+    public UserDTO toDTO(){
+        return new UserDTO(id,name,email,phone,password,photoPath,isAdmin);
     }
 }

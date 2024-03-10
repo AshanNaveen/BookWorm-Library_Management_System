@@ -1,17 +1,19 @@
 package lk.ijse.entity;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lk.ijse.embbeded.BorrowId;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
 
-@Entity(name = "borrow_details")
+@Entity
+@Table(name = "borrow_details")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class BorrowDetails {
     @EmbeddedId
     private BorrowId borrowId;
