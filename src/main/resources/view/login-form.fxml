@@ -68,10 +68,10 @@
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <JFXButton fx:id="btnLogin" layoutX="99.0" layoutY="342.0" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #523DDC; -fx-text-fill: white;" styleClass="login-btn" text="Login" />
+            <JFXButton fx:id="btnLogin" layoutX="99.0" layoutY="342.0" onAction="#btnLoginOnAction" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #523DDC; -fx-text-fill: white;" styleClass="login-btn" text="Login" />
             <Line endX="100.0" layoutX="240.0" layoutY="413.0" startX="-183.0" stroke="#523ddc" strokeWidth="2.0" />
             <Text layoutX="56.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="You don’t have account ? " textAlignment="RIGHT" wrappingWidth="208.99999833106995" />
-            <Text fx:id="btnSignUp" fill="#7565d7" layoutX="266.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" styleClass="signUp-btn" text="Sign up" wrappingWidth="85.99999833106995" />
+            <Text fx:id="btnSignUp" fill="#7565d7" layoutX="266.0" layoutY="456.0" onMouseClicked="#btnSignUpOnAction" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" styleClass="signUp-btn" text="Sign up" wrappingWidth="85.99999833106995" />
          </children>
       </Pane>
    </children>
