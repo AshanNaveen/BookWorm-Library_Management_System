@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/loginForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpFormController">
+    <children>
+        <ImageView fitHeight="789.0" fitWidth="1219.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/bgTexture.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="621.0" fitWidth="979.0" layoutX="131.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="131.42266845703125" AnchorPane.topAnchor="84.0">
+            <image>
+                <Image url="@../assets/Exclude.png" />
+            </image>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#00000080" offsetY="4.0" />
+            </effect>
+        </ImageView>
+        <Text fill="WHITE" layoutX="213.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="login-page-quato" text="“ A reader lives a thousand lives before he dies ”" wrappingWidth="370.01171875">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="220.0" fitWidth="199.0" layoutX="304.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/2151007430%201.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="133.0" fitWidth="420.0" layoutX="188.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/Logo.png" />
+            </image>
+        </ImageView>
+        <Pane layoutX="636.0" layoutY="143.0" prefHeight="502.0" prefWidth="400.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30; -fx-border-color: #523DDC; -fx-border-width: 2; -fx-border-radius: 30;">
+            <effect>
+                <DropShadow color="#00000070" height="15.0" offsetY="4.0" radius="7.0" width="15.0" />
+            </effect>
+            <children>
+                <Text layoutX="118.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="signIn-text" text="Sign Up">
+                    <effect>
+                        <DropShadow color="#0000008a" height="27.22" offsetY="5.0" width="14.78" />
+                    </effect>
+                </Text>
+                <Line endX="100.0" layoutX="240.0" layoutY="94.0" startX="-183.0" stroke="#523ddc" strokeWidth="2.0" />
+                <JFXTextField fx:id="txtUsername" focusColor="#523ddc" labelFloat="true" layoutX="56.0" layoutY="129.0" prefHeight="31.0" prefWidth="285.0" promptText="Name" unFocusColor="#979797" />
+                <JFXButton fx:id="btnRegister" layoutX="99.0" layoutY="378.0" onAction="#btnRegisterOnAction" onMouseEntered="#btnRegisterOnEnterd" onMouseExited="#btnRegisterOnExited" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #523DDC; -fx-text-fill: white;" styleClass="login-btn" text="Register" />
+            <Group layoutX="56.0" layoutY="188.0">
+               <children>
+                      <JFXPasswordField fx:id="txtPasswordHide" focusColor="#513be0" labelFloat="true" prefHeight="38.0" prefWidth="285.0" promptText="Password" />
+                      <JFXTextField fx:id="txtPasswordUnHide" focusColor="#513be0" labelFloat="true" layoutY="4.0" prefHeight="31.0" prefWidth="285.0" promptText="Password" unFocusColor="#979797" visible="false" />
+               </children>
+            </Group>
+                <Line endX="100.0" layoutX="240.0" layoutY="438.0" startX="-183.0" stroke="#523ddc" strokeWidth="2.0" />
+                <Text layoutX="32.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="You have account ? " textAlignment="RIGHT" wrappingWidth="208.99999833106995" />
+                <Text fx:id="btnSignIn" fill="#7565d7" layoutX="242.0" layoutY="473.0" onMouseClicked="#btnSignInOnAction" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" styleClass="signUp-btn" text="Sign In" wrappingWidth="85.99999833106995">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Text>
+                <Label fx:id="lblWarning" layoutX="56.0" layoutY="294.0" textFill="#ff4a4a">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            <JFXTextField fx:id="txtEmail" focusColor="#523ddc" labelFloat="true" layoutX="56.0" layoutY="251.0" prefHeight="31.0" prefWidth="285.0" promptText="Email" unFocusColor="#979797" />
+            <JFXTextField fx:id="txtPhone" focusColor="#523ddc" labelFloat="true" layoutX="56.0" layoutY="313.0" prefHeight="31.0" prefWidth="285.0" promptText="Phone" unFocusColor="#979797" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
