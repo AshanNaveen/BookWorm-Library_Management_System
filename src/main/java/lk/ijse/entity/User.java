@@ -24,8 +24,11 @@ public class User {
     @Column(name = "isAdmin" , nullable = false)
     private boolean isAdmin;
 
-    @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "userId")
+    @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "user")
     private List<Branch> brances;
+
+    @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "user")
+    private List<BorrowDetails> borrowDetails;
 
     @Override
     public String toString() {
