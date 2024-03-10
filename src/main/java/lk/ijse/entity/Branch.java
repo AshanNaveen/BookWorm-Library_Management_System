@@ -20,8 +20,8 @@ public class Branch {
     private String address;
 
     @ManyToOne
-    @JoinColumn(name = "uId")
-    private User userId;
+    @JoinColumn(name = "user")
+    private User user;
 
     @Override
     public String toString() {
