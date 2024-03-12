@@ -17,12 +17,15 @@ import java.sql.Timestamp;
 public class BorrowDetails {
     @EmbeddedId
     private BorrowId borrowId;
+
     @ManyToOne
     @JoinColumn(name = "uId",insertable = false,updatable = false)
     private User user;
+
     @ManyToOne
     @JoinColumn(name = "bId",insertable = false,updatable = false)
     private Book book;
+
     @CreationTimestamp
     private Timestamp timestamp;
 }
