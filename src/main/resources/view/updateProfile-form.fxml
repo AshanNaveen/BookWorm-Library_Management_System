@@ -1,44 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="625.0" prefWidth="1212.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UpdateProfileFormController">
+<AnchorPane prefHeight="758.0" prefWidth="1213.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UpdateProfileFormController">
    <children>
-      <Text layoutX="398.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Raleway&quot;; -fx-font-weight: 600; -fx-font-size: 50;" text="Update Profile Info">
+      <Text fill="#513be0" layoutX="404.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Raleway&quot;; -fx-font-weight: 600; -fx-font-size: 50;" text="Update Profile Info">
          <font>
             <Font size="41.0" />
          </font>
          <effect>
-            <DropShadow color="#00000077" height="13.0" offsetY="4.0" radius="6.0" width="13.0" />
+            <DropShadow color="#00000077" height="13.0" offsetY="3.0" radius="6.0" width="13.0" />
          </effect>
       </Text>
-      <Text fx:id="btnBackWord" fill="#513be0" layoutX="103.0" layoutY="57.0" onMouseClicked="#btnBackOnAction" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Raleway'; -fx-font-size: 24; -fx-font-weight: 800;" text="Back">
+      <Text fx:id="btnBackWord" accessibleRole="BUTTON" fill="#513be0" layoutX="109.0" layoutY="160.0" onMouseClicked="#btnBackOnAction" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Raleway'; -fx-font-size: 24; -fx-font-weight: 800;" text="Back">
          <font>
             <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
          </font>
       </Text>
-      <ImageView fx:id="btnBackArrow" fitHeight="21.0" fitWidth="34.0" layoutX="70.0" layoutY="38.0" onMouseClicked="#btnBackOnAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="btnBackArrow" accessibleRole="BUTTON" fitHeight="21.0" fitWidth="34.0" layoutX="76.0" layoutY="141.0" onMouseClicked="#btnBackOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/arrowPurple.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <JFXTextField fx:id="txtEmail" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="232.0" prefHeight="31.0" prefWidth="369.0" promptText=" Email" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
-      <JFXTextField fx:id="txtName" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="159.0" prefHeight="31.0" prefWidth="369.0" promptText=" Name" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
-      <JFXTextField fx:id="txtPhone" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="305.0" prefHeight="31.0" prefWidth="369.0" promptText=" Phone Number" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
-      <JFXTextField fx:id="txtPassword" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="378.0" prefHeight="31.0" prefWidth="369.0" promptText=" Password" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
-      <JFXTextField fx:id="txtConfirmPassword" focusColor="#513be0" labelFloat="true" layoutX="184.0" layoutY="451.0" prefHeight="31.0" prefWidth="369.0" promptText=" Confirm Password" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
-      <Pane fx:id="photoPane" layoutX="736.0" layoutY="159.0" prefHeight="257.0" prefWidth="257.0" style="-fx-background-color: black; -fx-border-radius: 100; -fx-background-radius: 40;" />
-      <JFXButton fx:id="btnUpdate" layoutX="627.0" layoutY="528.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="219.0" style="-fx-background-color: #1C9628; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Update Details" />
-      <JFXButton fx:id="btnDelete" layoutX="884.0" layoutY="528.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="219.0" style="-fx-background-color: #FF4949; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Delete My Account" />
-      <JFXButton fx:id="btnUploadPhoto" layoutX="737.0" layoutY="451.0" onAction="#btnUploadPhotoOnAction" prefHeight="39.0" prefWidth="257.0" style="-fx-background-color: #513be0; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Upload Photo" />
+      <JFXTextField fx:id="txtEmail" focusColor="#513be0" labelFloat="true" layoutX="190.0" layoutY="335.0" prefHeight="31.0" prefWidth="369.0" promptText=" Email" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
+      <JFXTextField fx:id="txtName" focusColor="#513be0" labelFloat="true" layoutX="190.0" layoutY="262.0" prefHeight="31.0" prefWidth="369.0" promptText=" Name" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
+      <JFXTextField fx:id="txtPhone" focusColor="#513be0" labelFloat="true" layoutX="190.0" layoutY="408.0" prefHeight="31.0" prefWidth="369.0" promptText=" Phone Number" style="-fx-font-family: 'Raleway'; -fx-font-weight: 600; -fx-font-size: 18;" />
+      <Pane fx:id="photoPane" layoutX="724.0" layoutY="240.0" prefHeight="298.0" prefWidth="298.0" style="-fx-background-color: black; -fx-border-radius: 100; -fx-background-radius: 40;" />
+      <JFXButton fx:id="btnUpdate" layoutX="633.0" layoutY="631.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="219.0" style="-fx-background-color: #1C9628; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Update Details" />
+      <JFXButton fx:id="btnDelete" layoutX="890.0" layoutY="631.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="219.0" style="-fx-background-color: #FF4949; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Delete My Account" />
+      <JFXButton fx:id="btnUploadPhoto" layoutX="744.0" layoutY="564.0" onAction="#btnUploadPhotoOnAction" prefHeight="39.0" prefWidth="257.0" style="-fx-background-color: #513be0; -fx-background-radius: 10; -fx-font-family: 'Raleway'; -fx-text-fill: white; -fx-font-weight: 700; -fx-font-size: 18;" text="Upload Photo" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#513be0" height="90.0" strokeType="INSIDE" strokeWidth="0.0" width="1213.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#513be0" height="38.0" layoutY="720.0" strokeType="INSIDE" strokeWidth="0.0" width="1213.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <ImageView fitHeight="69.0" fitWidth="247.0" layoutX="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/whiteLogo.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="830.0" layoutY="51.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="The World Biggest Online Library...." textAlignment="RIGHT">
+         <font>
+            <Font name="French Script MT" size="33.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="39.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="© 2024 BookWorm Inc.">
+         <font>
+            <Font name="High Tower Text" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="passwordCopy" labelFloat="true" layoutX="190.0" layoutY="481.0" prefHeight="31.0" prefWidth="369.0" promptText=" Password" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="190.0" layoutY="554.0" prefHeight="31.0" prefWidth="369.0" promptText=" Confirm Password" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField labelFloat="true" layoutX="190.0" layoutY="481.0" prefHeight="31.0" prefWidth="369.0" promptText=" Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField labelFloat="true" layoutX="190.0" layoutY="554.0" prefHeight="31.0" prefWidth="369.0" promptText=" Confirm Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fitHeight="32.0" fitWidth="53.0" layoutX="513.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/closedEye.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="53.0" layoutX="513.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/closedEye.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
