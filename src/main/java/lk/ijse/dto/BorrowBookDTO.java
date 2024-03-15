@@ -1,10 +1,13 @@
 package lk.ijse.dto;
 
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+
+import java.sql.Timestamp;
 
 
 @Data
@@ -13,8 +16,10 @@ import lombok.NonNull;
 public class BorrowBookDTO {
     private String photoPath;
     private String bookName;
-    private String bookId;
+    private Long bookId;
     private String author;
     private Long userId;
     private VBox returnBox;
+    private Text lblCount;
+    private Timestamp borrowedTimestamp;
 }
