@@ -46,14 +46,15 @@ public class SignUpFormController {
     private JFXTextField txtPhone;
 
     UserBO userBO = new UserBOImpl();
+
     @FXML
     void btnRegisterOnAction(ActionEvent event) {
-        if (!(txtUsername.getText().isEmpty() && txtPasswordHide.getText().isEmpty() && txtEmail.getText().isEmpty() && txtPhone.getText().isEmpty())){
+        if (!(txtUsername.getText().isEmpty() && txtPasswordHide.getText().isEmpty() && txtEmail.getText().isEmpty() && txtPhone.getText().isEmpty())) {
             UserDTO userDTO = new UserDTO(0L, txtUsername.getText(), txtEmail.getText(), txtPhone.getText(), txtPasswordHide.getText(), null, false);
-            Boolean isSaved=userBO.saveUser(userDTO);
-            if (isSaved){
-                new Alert(Alert.AlertType.CONFIRMATION,"User Saved").show();
-            }else {
+            Boolean isSaved = userBO.saveUser(userDTO);
+            if (isSaved) {
+                new Alert(Alert.AlertType.CONFIRMATION, "User Saved").show();
+            } else {
                 new Alert(Alert.AlertType.ERROR).show();
             }
         }
@@ -71,14 +72,7 @@ public class SignUpFormController {
 
     @FXML
     void btnSignInOnAction(MouseEvent event) {
-        try {
-//            Scene scene = new Scene(FXMLLoader.load(this.getClass().getResource("/view/login-form.fxml")));
-//            Stage window = (Stage) btnRegister.getScene().getWindow();
-//            window.setScene(scene);
-            Navigation.switchNavigation("login-form.fxml",event);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Navigation.switchNavigation("login-form.fxml", event);
 
     }
 }
