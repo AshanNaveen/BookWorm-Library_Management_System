@@ -17,7 +17,7 @@ public class BookDAOImpl implements BooksDAO {
 
     @Override
     public void update(Book object) {
-        session.persist(object);
+        session.update(object);
     }
 
     @Override
@@ -27,12 +27,14 @@ public class BookDAOImpl implements BooksDAO {
 
     @Override
     public void delete(Book object) {
-        session.delete(object);
+        Book book = get(object.getId());
+        book.setDeleted(true);
+        update(book);
     }
 
     @Override
     public List<Book> getAll() {
-        String jpql="SELECT B FROM Book B";
+        String jpql="SELECT B FROM Book B WHERE B.isDeleted=false";
         Query<Book> query = session.createQuery(jpql, Book.class);
         List<Book> list = query.list();
         return list;
