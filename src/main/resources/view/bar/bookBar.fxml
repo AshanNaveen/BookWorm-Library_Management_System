@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.barController.BookBarController">
+   <children>
+      <Pane prefHeight="56.0" prefWidth="1044.0" style="-fx-border-color: white;" styleClass="bar">
+         <children>
+            <Text fx:id="txtId" fill="#545454" layoutX="25.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Poppins-14" text="01" wrappingWidth="23.896558731794357" />
+            <Text fx:id="txtAuthor" fill="#545454" layoutX="283.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Poppins-14" text="Martin Wickramasinghe" wrappingWidth="191.00000172108412" />
+            <Text fx:id="txtGenre" fill="#545454" layoutX="499.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Poppins-14" text="Novel" wrappingWidth="87.74218007922173" />
+            <Text fx:id="txtIsbn" fill="#545454" layoutX="623.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Poppins-14" text="12345678" wrappingWidth="101.00000628702765" />
+            <JFXButton fx:id="btnUpdate" layoutX="917.0" layoutY="10.0" minWidth="46.0" onAction="#btnUpdateOnAction" prefHeight="32.0" prefWidth="46.0" styleClass="round-btn" stylesheets="@../css/button.css" text=" ">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/icons8-edit-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="976.0" layoutY="12.0" minWidth="46.0" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="46.0" styleClass="round-btn" stylesheets="@../css/button.css" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/icons8-remove-24%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Text fx:id="txtName" fill="#545454" layoutX="102.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Poppins-14" text="Madol Duwa" wrappingWidth="154.0" />
+            <JFXTextField fx:id="txtEName" layoutX="95.0" layoutY="11.0" prefHeight="31.0" prefWidth="150.0" unFocusColor="#4d4d4d00" visible="false" />
+            <JFXTextField fx:id="txtEAuthor" layoutX="282.0" layoutY="11.0" prefHeight="31.0" prefWidth="174.0" unFocusColor="#4d4d4d00" visible="false" />
+            <JFXTextField fx:id="txtEIsbn" layoutX="619.0" layoutY="11.0" prefHeight="31.0" prefWidth="90.0" unFocusColor="#4d4d4d00" visible="false" />
+            <JFXTextField fx:id="txtEPhotoPath" layoutX="742.0" layoutY="11.0" prefHeight="31.0" prefWidth="140.0" unFocusColor="#4d4d4d00" visible="false" />
+            <JFXButton fx:id="btnUpdateSave" layoutX="917.0" layoutY="10.0" minWidth="46.0" onAction="#btnUpdateSaveOnAction" prefHeight="32.0" prefWidth="46.0" styleClass="round-btn" stylesheets="@../css/button.css" visible="false">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/icons8-tick-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXComboBox fx:id="cmbGenre" layoutX="474.0" layoutY="12.0" prefHeight="31.0" prefWidth="101.0" visible="false" />
+            <Label fx:id="txtPhotoPath" layoutX="767.0" layoutY="15.0" prefHeight="21.0" prefWidth="90.0" text="/src/ddafadfsaas" />
+         </children>
+         <stylesheets>
+            <URL value="@../css/text.css" />
+            <URL value="@../css/Scrool.css" />
+         </stylesheets>
+      </Pane>
+   </children>
+</AnchorPane>
