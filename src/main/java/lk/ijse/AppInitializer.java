@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lk.ijse.util.SessionFactoryConfig;
+import org.hibernate.Session;
 
 public class AppInitializer extends Application {
     public static void main(String[] args) {
@@ -14,6 +15,8 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        session.close();
         stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/login-form.fxml"))));
         stage.show();
     }
