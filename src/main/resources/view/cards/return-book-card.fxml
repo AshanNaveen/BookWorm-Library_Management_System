@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="57.0" prefWidth="334.0" style="-fx-background-radius: 8; -fx-background-color: white; -fx-border-color: #00F427; -fx-border-radius: 8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.cardController.ReturnBookCardController">
+   <children>
+      <JFXButton fx:id="btnReturn" layoutX="230.0" layoutY="13.0" onAction="#btnReturnOnAction" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #513be0; -fx-text-fill: white; -fx-font-weight: 800;" text="Return" />
+      <Label fx:id="lblBookName" layoutX="13.0" layoutY="9.0" prefHeight="25.0" prefWidth="205.0" text="Madol Duwa">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDueDate" layoutX="13.0" layoutY="29.0" prefHeight="21.0" prefWidth="202.0" text="Due Date - 07 / 08 / 2024">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
