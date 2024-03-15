@@ -53,8 +53,12 @@ public class LoginFormController {
 
             if (userDTO != null) {
                 if (userDTO.getEmail() != null && txtPasswordHide.getText().equals(userDTO.getPassword())) {
-                    userID=userDTO.getId();
-                    Navigation.switchNavigation("user-dashboard-form.fxml", event);
+                    userID = userDTO.getId();
+                    if (userDTO.isAdmin()) {
+                        Navigation.switchNavigation("admin-dashboard-form.fxml", event);
+                    } else {
+                        Navigation.switchNavigation("user-dashboard-form.fxml", event);
+                    }
                 }
             } else {
                 lblWarning.setText("Invalid Username or Password !");
@@ -66,10 +70,7 @@ public class LoginFormController {
 
     @FXML
     void btnSignUpOnAction(MouseEvent event) {
-        try {
-            Navigation.switchNavigation("sign-up-form.fxml", event);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Navigation.switchNavigation("sign-up-form.fxml", event);
+
     }
 }
