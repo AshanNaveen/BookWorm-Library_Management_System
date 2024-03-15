@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -27,9 +28,13 @@ public class Book {
     private String photoPath;
     @Column(name = "isbn" ,nullable = false,unique = true)
     private String isbn;
+    @Column(name = "isAvailable" , nullable = false)
+    private boolean isAvailable;
+    @Column(name = "isDeleted" , nullable = false)
+    private boolean isDeleted;
 
     @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "book")
-    private List<BorrowDetails> borrowDetails;
+    private List<BorrowDetails> borrowDetails=new ArrayList<>();
 
     public BookDTO toDTO(){
         return new BookDTO(id,name,genre,author,photoPath,isbn);
