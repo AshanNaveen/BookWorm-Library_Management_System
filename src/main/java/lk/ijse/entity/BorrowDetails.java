@@ -15,17 +15,23 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BorrowDetails {
-    @EmbeddedId
-    private BorrowId borrowId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long borrowId;
 
     @ManyToOne
-    @JoinColumn(name = "uId",insertable = false,updatable = false)
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "bId",insertable = false,updatable = false)
     private Book book;
 
     @CreationTimestamp
     private Timestamp timestamp;
+
+    @Column(name = "dueTimestamp")
+    private Timestamp dueTimestamp;
+
+    @Column(name = "isReturned")
+    private boolean isReturned;
 }
