@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="758.0" prefWidth="1213.0" stylesheets="@../css/Scrool.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ReadingHistoryController">
+   <children>
+      <ScrollPane layoutX="27.0" layoutY="232.0" prefHeight="459.0" prefWidth="1160.0">
+         <content>
+            <VBox fx:id="books" prefHeight="455.0" prefWidth="1154.0" />
+         </content>
+      </ScrollPane>
+      <Text layoutX="409.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Raleway&quot;; -fx-font-weight: 600; -fx-font-size: 50;" text="Reading History">
+         <font>
+            <Font size="41.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000077" height="13.0" offsetY="4.0" radius="6.0" width="13.0" />
+         </effect>
+      </Text>
+      <Text fx:id="btnBackWord" fill="#513be0" layoutX="114.0" layoutY="147.0" onMouseClicked="#btnBackOnAction" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Raleway'; -fx-font-size: 24; -fx-font-weight: 800;" text="Back">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="btnBackArrow" fitHeight="21.0" fitWidth="34.0" layoutX="81.0" layoutY="128.0" onMouseClicked="#btnBackOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/arrowPurple.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#513be0" height="90.0" strokeType="INSIDE" strokeWidth="0.0" width="1213.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#513be0" height="38.0" layoutY="720.0" strokeType="INSIDE" strokeWidth="0.0" width="1213.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <ImageView fitHeight="69.0" fitWidth="247.0" layoutX="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/whiteLogo.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="830.0" layoutY="51.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="The World Biggest Online Library...." textAlignment="RIGHT">
+         <font>
+            <Font name="French Script MT" size="33.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="39.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="© 2024 BookWorm Inc.">
+         <font>
+            <Font name="High Tower Text" size="21.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
