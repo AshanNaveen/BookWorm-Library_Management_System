@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -32,10 +33,10 @@ public class User {
     private boolean isAdmin;
 
     @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "user")
-    private List<Branch> brances;
+    private List<Branch> brances=new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.LAZY , mappedBy = "user")
-    private List<BorrowDetails> borrowDetails;
+    private List<BorrowDetails> borrowDetails=new ArrayList<>();
 
     public UserDTO toDTO(){
         return new UserDTO(id,name,email,phone,password,photoPath,isAdmin);
