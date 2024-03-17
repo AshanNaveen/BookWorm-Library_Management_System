@@ -1,8 +1,10 @@
-package lk.ijse.bo;
+package lk.ijse.bo.custom.impl;
 
 import jakarta.persistence.NoResultException;
-import lk.ijse.dao.UserDAO;
-import lk.ijse.dao.UserDAOImpl;
+import lk.ijse.bo.custom.UserBO;
+import lk.ijse.dao.DAOFactory;
+import lk.ijse.dao.custom.UserDAO;
+import lk.ijse.dao.custom.impl.UserDAOImpl;
 import lk.ijse.dto.UserDTO;
 import lk.ijse.entity.User;
 import lk.ijse.util.SessionFactoryConfig;
@@ -10,7 +12,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 public class UserBOImpl implements UserBO {
-    UserDAO userDAO = new UserDAOImpl();
+    UserDAO userDAO = (UserDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.User);
 
     @Override
     public UserDTO findCredential(String text) throws NoResultException {

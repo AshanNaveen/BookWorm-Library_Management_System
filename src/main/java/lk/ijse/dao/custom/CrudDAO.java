@@ -1,8 +1,10 @@
-package lk.ijse.dao;
+package lk.ijse.dao.custom;
+
+import lk.ijse.dao.SuperDAO;
 
 import java.util.List;
 
-public interface CrudDAO<T, ID> extends SuperDAO{
+public interface CrudDAO<T, ID> extends SuperDAO {
 
     ID save(T object);
 

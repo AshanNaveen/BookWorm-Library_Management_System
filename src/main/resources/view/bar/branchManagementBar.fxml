@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="58.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.barController.BranchManagementBarController">
+   <children>
+      <Pane prefHeight="58.0" prefWidth="1045.0" style="-fx-background-color: white;" styleClass="bar" stylesheets="@../../css/tbl.css">
+         <children>
+            <Label fx:id="lblId" layoutX="14.0" layoutY="17.0" prefHeight="21.0" prefWidth="72.0" text="01">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="146.0" layoutY="17.0" prefHeight="25.0" prefWidth="187.0" text="Library 01">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAddress" layoutX="347.0" layoutY="17.0" prefHeight="25.0" prefWidth="252.0" text="Galle Road , Wakwalla">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmail" layoutX="631.0" layoutY="17.0" prefHeight="25.0" prefWidth="208.0" text="library01@bookworm.lk">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnUpdate" layoutX="912.0" layoutY="10.0" minWidth="46.0" onAction="#btnUpdateOnAction" prefHeight="32.0" prefWidth="46.0" styleClass="round-btn" stylesheets="@../css/button.css" text=" ">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/icons8-edit-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="971.0" layoutY="12.0" minWidth="46.0" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="46.0" styleClass="round-btn" stylesheets="@../css/button.css" text=" ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/icons8-remove-24%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdateSave" layoutX="912.0" layoutY="10.0" minWidth="46.0" onAction="#btnUpdateSaveOnAction" prefHeight="32.0" prefWidth="46.0" styleClass="round-btn" stylesheets="@../css/button.css" visible="false">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/icons8-tick-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="txtName" focusColor="#513be0" layoutX="133.0" layoutY="13.0" visible="false" />
+            <JFXTextField fx:id="txtAddress" focusColor="#513be0" layoutX="333.0" layoutY="14.0" prefHeight="31.0" prefWidth="187.0" visible="false" />
+            <JFXTextField fx:id="txtEmail" focusColor="#513be0" layoutX="547.0" layoutY="14.0" prefHeight="31.0" prefWidth="187.0" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

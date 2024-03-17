@@ -1,17 +1,17 @@
 package lk.ijse.controller;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import lk.ijse.bo.BookBO;
-import lk.ijse.bo.BookBOImpl;
+import lk.ijse.bo.custom.BookBO;
+import lk.ijse.bo.custom.impl.BookBOImpl;
 import lk.ijse.controller.barController.BookBarController;
 import lk.ijse.dto.BookDTO;
 import lk.ijse.util.Navigation;
@@ -65,6 +65,12 @@ public class BooksManagementFormController {
     public void initialize(){
         allbooks= bookBO.loadAllBooks();
         loadBooks();
+        loadCmbBox();
+    }
+
+    private void loadCmbBox() {
+        ObservableList<String> genres= FXCollections.observableArrayList();
+
     }
 
     public void loadBooks()  {

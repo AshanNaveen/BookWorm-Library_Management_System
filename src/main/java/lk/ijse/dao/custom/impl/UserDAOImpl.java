@@ -1,13 +1,14 @@
-package lk.ijse.dao;
+package lk.ijse.dao.custom.impl;
 
 import jakarta.persistence.NoResultException;
+import lk.ijse.dao.custom.UserDAO;
 import lk.ijse.entity.User;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class UserDAOImpl implements UserDAO{
+public class UserDAOImpl implements UserDAO {
 
     private Session session;
     @Override

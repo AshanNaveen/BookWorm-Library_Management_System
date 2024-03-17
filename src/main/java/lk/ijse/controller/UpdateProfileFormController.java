@@ -12,14 +12,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
-import lk.ijse.bo.UserBO;
-import lk.ijse.bo.UserBOImpl;
-import lk.ijse.dto.UserDTO;
+import lk.ijse.bo.custom.UserBO;
+import lk.ijse.bo.custom.impl.UserBOImpl;
 import lk.ijse.util.Navigation;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.Optional;
 
 public class UpdateProfileFormController {

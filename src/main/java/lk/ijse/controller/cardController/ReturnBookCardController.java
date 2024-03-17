@@ -1,22 +1,15 @@
 package lk.ijse.controller.cardController;
 
 import com.jfoenix.controls.JFXButton;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
+import lk.ijse.bo.custom.impl.BorrowBookBOImpl;
 import lk.ijse.controller.UserDashboardFormController;
-import lk.ijse.dto.BorrowBookDTO;
 import lk.ijse.dto.ReturnBookDTO;
-import lk.ijse.entity.User;
 import lk.ijse.util.DateTimeUtil;
-import lk.ijse.util.Navigation;
 
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.time.LocalDate;
 
 public class ReturnBookCardController {
     @FXML
@@ -30,11 +23,15 @@ public class ReturnBookCardController {
 
     ReturnBookDTO dto;
 
+    BorrowBookBOImpl borrowBookBO = new BorrowBookBOImpl();
+
     @FXML
     void btnReturnOnAction(ActionEvent event) throws IOException {
+        System.out.println("return");
         UserDashboardFormController.userDashboardFormController.borrowedBooks.remove(dto);
         UserDashboardFormController.userDashboardFormController.loadAllReturns();
-
+        borrowBookBO.updateReturnedBook(dto.getUserId(),dto.getBookId());
+        UserDashboardFormController.userDashboardFormController.loadAllBooks();
     }
 
     public void setData(ReturnBookDTO dto){

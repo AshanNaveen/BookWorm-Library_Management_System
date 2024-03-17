@@ -10,7 +10,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import lk.ijse.controller.FxmlController;
 import lk.ijse.dto.UserDTO;
 
 import java.io.IOException;

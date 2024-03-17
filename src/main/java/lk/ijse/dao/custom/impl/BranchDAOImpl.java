@@ -1,6 +1,6 @@
-package lk.ijse.dao;
+package lk.ijse.dao.custom.impl;
 
-import lk.ijse.entity.Book;
+import lk.ijse.dao.custom.BranchDAO;
 import lk.ijse.entity.Branch;
 import org.hibernate.Session;
 import org.hibernate.query.Query;

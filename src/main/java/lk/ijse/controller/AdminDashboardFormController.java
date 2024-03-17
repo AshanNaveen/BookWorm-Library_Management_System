@@ -10,10 +10,6 @@ public class AdminDashboardFormController {
     @FXML
     private JFXButton btnLogOut;
 
-    @FXML
-    void btnAdminOnAction(MouseEvent event) {
-        Navigation.switchNavigation("admins-mangement-form.fxml",event);
-    }
 
     @FXML
     void btnBookOnAction(MouseEvent event) {

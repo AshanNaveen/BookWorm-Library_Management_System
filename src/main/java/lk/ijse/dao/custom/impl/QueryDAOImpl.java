@@ -1,5 +1,6 @@
-package lk.ijse.dao;
+package lk.ijse.dao.custom.impl;
 
+import lk.ijse.dao.custom.QueryDAO;
 import lk.ijse.dto.ReturnBookDTO;
 import lk.ijse.entity.Book;
 import org.hibernate.Session;
@@ -9,7 +10,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QueryDAOImpl implements QueryDAO{
+public class QueryDAOImpl implements QueryDAO {
 
     private Session session;
 

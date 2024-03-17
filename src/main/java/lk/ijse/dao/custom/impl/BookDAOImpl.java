@@ -1,5 +1,6 @@
-package lk.ijse.dao;
+package lk.ijse.dao.custom.impl;
 
+import lk.ijse.dao.custom.BooksDAO;
 import lk.ijse.entity.Book;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -34,7 +35,7 @@ public class BookDAOImpl implements BooksDAO {
 
     @Override
     public List<Book> getAll() {
-        String jpql="SELECT B FROM Book B WHERE B.isDeleted=false";
+        String jpql="SELECT B FROM Book B WHERE B.isDeleted=false AND B.isAvailable=true";
         Query<Book> query = session.createQuery(jpql, Book.class);
         List<Book> list = query.list();
         return list;

@@ -3,24 +3,15 @@ package lk.ijse.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import jakarta.persistence.NoResultException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import javafx.stage.Window;
-import lk.ijse.bo.UserBO;
-import lk.ijse.bo.UserBOImpl;
+import lk.ijse.bo.custom.UserBO;
+import lk.ijse.bo.custom.impl.UserBOImpl;
 import lk.ijse.dto.UserDTO;
 import lk.ijse.util.Navigation;
-
-import java.io.IOException;
-import java.util.Objects;
 
 public class LoginFormController {
     @FXML

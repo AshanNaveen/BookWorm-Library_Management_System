@@ -19,7 +19,7 @@ public class ValidateUtil {
 
     public static boolean validateMail(String mail, JFXTextField field) {
         if (Pattern.matches("\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b", mail)) {
-            field.setStyle("-fx-text-fill:  #B1F041 ");
+            field.setStyle("-fx-text-fill:  #513be0");
             return true;
         } else {
             field.setStyle("-fx-text-fill: #FA5252");
@@ -58,7 +58,7 @@ public class ValidateUtil {
             field.setStyle("-fx-text-fill:  #B1F041 ");
             return true;
         } else {
-            field.setStyle("-fx-text-fill: #FA5252");
+            field.setStyle("-fx-text-fill: #513be0");
             return false;
         }
     }
@@ -139,7 +139,7 @@ public class ValidateUtil {
     }
 
     public static boolean validateName(String text, JFXTextField field) {
-        if (Pattern.matches("^[A-Za-z]+([ '-][A-Za-z]+)*$", text)) {
+        if (Pattern.matches("^[A-Za-z]+([ '-][A-Za-z]+)*(\\s\\d+)?$", text)) {
             field.setStyle("-fx-text-fill:  #B1F041 ");
             return true;
         } else {

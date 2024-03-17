@@ -55,19 +55,19 @@
                 <JFXButton fx:id="btnLogOut" layoutX="1043.0" layoutY="628.0" onAction="#btnLogOutOnAction" prefHeight="21.0" prefWidth="155.0" style="-fx-background-color: #FF4949; -fx-border-color: #FF4949; -fx-font-weight: 800;" styleClass="genreBtn" text="Log Out" textFill="WHITE" />
             <Pane accessibleRole="BUTTON" layoutX="50.0" layoutY="49.0" onMouseClicked="#btnBranchOnAction">
                <children>
-                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#3be073" height="235.0" layoutX="8.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="340.0">
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#3be073" height="235.0" layoutX="8.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="530.0">
                      <effect>
                         <DropShadow color="#0000007c" height="13.0" offsetY="4.0" radius="7.25" width="18.0" />
                      </effect>
                   </Rectangle>
-                  <ImageView fitHeight="115.0" fitWidth="143.0" layoutX="117.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="115.0" fitWidth="143.0" layoutX="368.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../assets/Vector.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="31.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch Management">
+                  <Text layoutX="46.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch Management" textAlignment="CENTER" wrappingWidth="295.6865234375">
                      <font>
-                        <Font name="System Bold" size="30.0" />
+                        <Font name="System Bold" size="47.0" />
                      </font>
                   </Text>
                </children>
@@ -75,43 +75,26 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Pane>
-            <Pane accessibleRole="BUTTON" layoutX="431.0" layoutY="49.0" onMouseClicked="#btnAdminOnAction">
-               <children>
-                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#e0b23b" height="235.0" layoutX="8.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="340.0">
-                     <effect>
-                        <DropShadow color="#0000007c" height="13.0" offsetY="4.0" radius="7.25" width="18.0" />
-                     </effect>
-                  </Rectangle>
-                  <ImageView fitHeight="115.0" fitWidth="143.0" layoutX="129.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/Group%2014%20(1).png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="33.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Management">
-                     <font>
-                        <Font name="System Bold" size="30.0" />
-                     </font>
-                  </Text>
-               </children>
+            <Pane accessibleRole="BUTTON" layoutX="431.0" layoutY="49.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Pane>
-            <Pane accessibleRole="BUTTON" layoutX="812.0" layoutY="49.0" onMouseClicked="#btnBookOnAction">
+            <Pane accessibleRole="BUTTON" layoutX="620.0" layoutY="49.0" onMouseClicked="#btnBookOnAction" prefHeight="237.0" prefWidth="540.0">
                <children>
-                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#3bcce0" height="235.0" layoutX="8.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="340.0">
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#3bcce0" height="235.0" layoutX="3.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="532.0">
                      <effect>
                         <DropShadow color="#0000007c" height="13.0" offsetY="4.0" radius="7.25" width="18.0" />
                      </effect>
                   </Rectangle>
-                  <ImageView fitHeight="139.0" fitWidth="139.0" layoutX="105.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="139.0" fitWidth="139.0" layoutX="363.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../assets/Book.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="37.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books Management">
+                  <Text layoutX="36.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books Management" textAlignment="CENTER" wrappingWidth="326.24462890625">
                      <font>
-                        <Font name="System Bold" size="30.0" />
+                        <Font name="System Bold" size="47.0" />
                      </font>
                   </Text>
                </children>
@@ -131,9 +114,9 @@
                         <Image url="@../assets/Arrow-for-Dashboard.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="27.0" layoutY="106.0" lineSpacing="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users , Not Returned Books" textAlignment="CENTER" wrappingWidth="370.0092746168375">
+                  <Text layoutX="20.0" layoutY="111.0" lineSpacing="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users , Not Returned Books" textAlignment="CENTER" wrappingWidth="370.0092746168375">
                      <font>
-                        <Font name="System Bold" size="41.0" />
+                        <Font name="System Bold" size="47.0" />
                      </font>
                   </Text>
                </children>
@@ -148,9 +131,46 @@
                         <DropShadow color="#0000007c" height="13.0" offsetY="4.0" radius="7.25" width="18.0" />
                      </effect>
                   </Rectangle>
-                  <Pane layoutX="32.0" layoutY="26.0" prefHeight="55.0" prefWidth="484.0" style="-fx-background-color: white; -fx-background-radius: 8;" />
-                  <Pane layoutX="32.0" layoutY="100.0" prefHeight="115.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8;" />
-                  <Pane layoutX="286.0" layoutY="100.0" prefHeight="115.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8;" />
+                  <Pane layoutX="32.0" layoutY="26.0" prefHeight="55.0" prefWidth="484.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                     <children>
+                        <Text layoutX="52.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users Count :">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblUserCount" layoutX="247.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="005" textAlignment="RIGHT" wrappingWidth="177.767578125">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="32.0" layoutY="100.0" prefHeight="115.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                     <children>
+                        <Text layoutX="1.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books Count " textAlignment="CENTER" wrappingWidth="148.9765625">
+                           <font>
+                              <Font name="System Bold" size="33.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblBookCount" layoutX="128.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="005" textAlignment="RIGHT" wrappingWidth="81.767578125">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
+                  <Pane layoutX="286.0" layoutY="100.0" prefHeight="115.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                     <children>
+                        <Text layoutX="7.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Not Returned Books Count" textAlignment="CENTER" wrappingWidth="148.9765625">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblNotReturnedBookCount" layoutX="133.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="005" textAlignment="RIGHT" wrappingWidth="81.767578125">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
                </children>
             </Pane>
             </children>

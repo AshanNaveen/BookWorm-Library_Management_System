@@ -7,14 +7,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import lk.ijse.bo.BookBO;
-import lk.ijse.bo.BookBOImpl;
+import lk.ijse.bo.custom.BookBO;
+import lk.ijse.bo.custom.impl.BookBOImpl;
 import lk.ijse.controller.BooksManagementFormController;
 import lk.ijse.dto.BookDTO;
-
-import java.sql.SQLException;
 
 public class BookBarController {
     @FXML
@@ -117,7 +114,6 @@ public class BookBarController {
         bookDTO.setIsbn(txtIsbn.getText());
         boolean isUpdated = bookBO.update(bookDTO);
         if (isUpdated){
-            new Alert(Alert.AlertType.CONFIRMATION , "Updated Successfully").show();
         }else{
             new Alert(Alert.AlertType.ERROR , "Error in Updating").show();
         }

@@ -10,13 +10,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import lk.ijse.bo.BookBO;
-import lk.ijse.bo.BookBOImpl;
-import lk.ijse.controller.cardController.BookCardController;
+import lk.ijse.bo.custom.BookBO;
+import lk.ijse.bo.custom.impl.BookBOImpl;
 import lk.ijse.controller.cardController.HistoryBookCardController;
 import lk.ijse.dto.BookDTO;
-import lk.ijse.dto.BorrowBookDTO;
-import lk.ijse.entity.Book;
 import lk.ijse.util.Navigation;
 
 import java.io.IOException;

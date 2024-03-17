@@ -1,9 +1,11 @@
-package lk.ijse.bo;
+package lk.ijse.bo.custom.impl;
 
-import lk.ijse.dao.BookDAOImpl;
-import lk.ijse.dao.BooksDAO;
-import lk.ijse.dao.QueryDAO;
-import lk.ijse.dao.QueryDAOImpl;
+import lk.ijse.bo.custom.BookBO;
+import lk.ijse.dao.DAOFactory;
+import lk.ijse.dao.custom.impl.BookDAOImpl;
+import lk.ijse.dao.custom.BooksDAO;
+import lk.ijse.dao.custom.QueryDAO;
+import lk.ijse.dao.custom.impl.QueryDAOImpl;
 import lk.ijse.dto.BookDTO;
 import lk.ijse.dto.ReturnBookDTO;
 import lk.ijse.entity.Book;
@@ -14,11 +16,11 @@ import org.hibernate.Transaction;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BookBOImpl implements BookBO{
+public class BookBOImpl implements BookBO {
 
-    BooksDAO booksDAO = new BookDAOImpl();
+    BooksDAO booksDAO = (BooksDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.Book);
 
-    QueryDAO queryDAO = new QueryDAOImpl();
+    QueryDAO queryDAO = (QueryDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.Query);
     @Override
     public List<BookDTO> loadAllBooks() {
         Session session = SessionFactoryConfig.getInstance().getSession();

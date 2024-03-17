@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
@@ -32,7 +33,10 @@
       </Label>
       <Pane layoutX="81.0" layoutY="214.0" prefHeight="478.0" prefWidth="1051.0" style="-fx-background-color: white;">
          <children>
-            <ScrollPane layoutY="57.0" prefHeight="427.0" prefWidth="1051.0" />
+            <ScrollPane layoutY="57.0" prefHeight="427.0" prefWidth="1051.0">
+               <content>
+                  <VBox fx:id="vBox" prefHeight="423.0" prefWidth="1042.0" />
+               </content></ScrollPane>
             <Label layoutX="239.0" layoutY="14.0" style="-fx-font-family: &quot;Raleway&quot;; -fx-font-size: 16; -fx-font-weight: 800;" text="User Name" textFill="#545353" />
             <Label layoutX="537.0" layoutY="14.0" style="-fx-font-family: &quot;Raleway&quot;; -fx-font-size: 16; -fx-font-weight: 800;" text="Book Name" textFill="#545353" />
             <Label layoutX="840.0" layoutY="14.0" style="-fx-font-family: &quot;Raleway&quot;; -fx-font-size: 16; -fx-font-weight: 800;" text="Due Date" textFill="#545353" />

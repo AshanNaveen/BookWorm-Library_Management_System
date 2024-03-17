@@ -8,17 +8,14 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import lk.ijse.bo.BorrowBookBO;
-import lk.ijse.bo.BorrowBookBOImpl;
+import lk.ijse.bo.custom.BorrowBookBO;
+import lk.ijse.bo.custom.impl.BorrowBookBOImpl;
 import lk.ijse.controller.UserDashboardFormController;
 import lk.ijse.dto.BorrowBookDTO;
 import lk.ijse.dto.ReturnBookDTO;
-import lombok.Setter;
 
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.util.Calendar;
 
 import static lk.ijse.util.DateTimeUtil.getDueTimestamp;
 
@@ -60,6 +57,7 @@ public class BookCardController {
         dto.getLblCount().setText(((count+1)<10 ? "0"+(count+1) : ""+(count+1)));
 
         borrowBook();
+        UserDashboardFormController.userDashboardFormController.loadAllBooks();
     }
 
     private void borrowBook() {

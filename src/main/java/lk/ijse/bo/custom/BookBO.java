@@ -1,11 +1,12 @@
-package lk.ijse.bo;
+package lk.ijse.bo.custom;
 
+import lk.ijse.bo.SuperBO;
 import lk.ijse.dto.BookDTO;
 import lk.ijse.dto.ReturnBookDTO;
 
 import java.util.List;
 
-public interface BookBO {
+public interface BookBO extends SuperBO {
     List<BookDTO> loadAllBooks();
 
     List<BookDTO> loadAllBooksByUser(Long userID);
